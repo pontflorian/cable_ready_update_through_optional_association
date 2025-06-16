@@ -1,0 +1,12 @@
+<div id="<%= dom_id category %>">
+  <p>
+    <strong>Name:</strong>
+    <%= cable_ready_updates_for category, only: :name do %>
+      <%= category.name %>
+    <% end %>
+  </p>
+  <%= cable_ready_updates_for category, :comments do %>
+    <div style="border: 1px solid #cccccc; padding: 5px; border-radius: 5px; margin-bottom: 10px;"
+    <%= render category.comments %>
+    </div>
+  <% end %>
