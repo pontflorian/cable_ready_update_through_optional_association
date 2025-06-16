@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Category.create(id: 1, name: "Sports")
+
+Post.create(id: 1, title: 'Sports in general', content: 'This is good', category_id: 1)
+
+Comment.create(content: 'Good sports!', post_id: 1)
+# Comment.create(content: 'A simple comment')
